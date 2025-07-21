@@ -1,0 +1,173 @@
+window.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-btn');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Slideshow Script
+    const slideshowSection = document.getElementById('slideshow-section');
+    const images = [
+        "imgs/homeBGs/newDesign/1.jpg",
+        "imgs/homeBGs/newDesign/2.jpg",
+        "imgs/homeBGs/newDesign/3.jpg",
+        "imgs/homeBGs/newDesign/4.jpg"
+    ];
+
+    let index = 0;
+
+    function changeImage() {
+        const imgUrl = `url('${images[index]}')`;
+        slideshowSection.style.backgroundImage = imgUrl;
+        index = (index + 1) % images.length;
+    }
+
+    setInterval(changeImage, 3000);
+    changeImage();
+
+    
+    const btnOpportunity = document.getElementById('btn-opportunity');
+    const contentOpportunity = document.getElementById('content-opportunity');
+
+    const btnInvest = document.getElementById('btn-invest');
+    const contentInvest = document.getElementById('content-invest');
+
+    btnOpportunity.addEventListener('click', () => {
+      contentOpportunity.classList.toggle('hidden');
+    });
+
+    btnInvest.addEventListener('click', () => {
+      contentInvest.classList.toggle('hidden');
+    });
+    
+
+    const ctx = document.getElementById('tokenChart').getContext('2d');
+  const tokenChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: [
+        'Treasury/Reserve', 'Marketing', 'Founding Team', 'Advisors',
+        'Staking/Yield Farming', 'Liquidity', 'Community Fund', 'Token Sales'
+      ],
+      datasets: [{
+        data: [25, 25, 15, 2.7, 10, 10, 10, 2.3],
+        backgroundColor: [
+          '#EF4444', '#FACC15', '#22C55E', '#FB923C',
+          '#22D3EE', '#0c1017ff', '#F43F5E', '#93C5FD'
+        ],
+        borderWidth: 0, // No border
+        hoverOffset: 15  // Enlarge slice on hover
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.raw || 0;
+              return `${label}: ${value}%`;
+            }
+          }
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            color: '#fff',         // white text
+            padding: 20,
+            boxWidth: 12,
+            font: {
+              size: 14,
+              weight: '500'
+            }
+          }
+        }
+      },
+      layout: {
+        padding: 20
+      }
+    }
+  });
+
+    
+
+  const ctx2 = document.getElementById('presaleChart').getContext('2d');
+
+  const labels = [
+    'Presale Phase 1',
+    'Presale Phase 2',
+    'Presale Phase 3',
+    'Presale Phase 4',
+    'Presale Phase 5',
+    'Presale Phase 6',
+    'IDO'
+  ];
+
+  const values = [2000000, 2000000, 1500000, 1500000, 1500000, 2000000, 10000000];
+
+  const colors = [
+    '#EF4444', '#FACC15', '#22C55E', '#FB923C',
+          '#22D3EE', '#2563EB', '#F43F5E'
+  ];
+
+  const presaleChart = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors,
+        borderWidth: 0,
+        hoverOffset: 15
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.raw || 0;
+              return `${label}: ${value}`;
+            }
+          }
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            color: '#fff',         // white text
+            padding: 20,
+            boxWidth: 12,
+            font: {
+              size: 14,
+              weight: '500'
+            }
+          }
+        }
+      },
+      layout: {
+        padding: 20
+      }
+    }
+  });
+
+});

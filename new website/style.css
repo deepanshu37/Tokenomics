@@ -1,0 +1,13 @@
+* {
+      font-family: 'Poppins', sans-serif;
+      font: white;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ED1C24, #FCAF17, #9AC23C, #1C75BC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, #ED1C24, #FCAF17, #9AC23C, #1C75BC);
+    }
