@@ -54,8 +54,27 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     
 
-    const ctx = document.getElementById('tokenChart').getContext('2d');
-  const tokenChart = new Chart(ctx, {
+
+
+
+
+// Run once after DOM is loaded
+//window.addEventListener('DOMContentLoaded', () => {
+  renderTokenChart();
+  renderPresaleChart();
+//});
+
+});
+
+let tokenChartInstance = null;
+let presaleChartInstance = null;
+
+function renderTokenChart() {
+  const ctx = document.getElementById('tokenChart').getContext('2d');
+
+  if (tokenChartInstance) tokenChartInstance.destroy();
+
+  tokenChartInstance = new Chart(ctx, {
     type: 'pie',
     data: {
       labels: [
@@ -68,106 +87,74 @@ window.addEventListener('DOMContentLoaded', () => {
           '#EF4444', '#FACC15', '#22C55E', '#FB923C',
           '#22D3EE', '#0c1017ff', '#F43F5E', '#93C5FD'
         ],
-        borderWidth: 0, // No border
-        hoverOffset: 15  // Enlarge slice on hover
+        borderWidth: 0,
+        hoverOffset: 10
       }]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,  // Allow better control via CSS
+      animation: false,            // Prevent zoom on load
       plugins: {
         tooltip: {
           callbacks: {
-            label: function(context) {
-              const label = context.label || '';
-              const value = context.raw || 0;
-              return `${label}: ${value}%`;
-            }
+            label: (context) => `${context.label || ''}: ${context.raw || 0}%`
           }
         },
         legend: {
           display: true,
           position: 'bottom',
           labels: {
-            color: '#fff',         // white text
-            padding: 20,
-            boxWidth: 12,
-            font: {
-              size: 14,
-              weight: '500'
-            }
+            color: '#fff',
+            font: { size: 14, weight: '500' }
           }
         }
-      },
-      layout: {
-        padding: 20
       }
     }
   });
+}
 
-    
-
+function renderPresaleChart() {
   const ctx2 = document.getElementById('presaleChart').getContext('2d');
 
-  const labels = [
-    'Presale Phase 1',
-    'Presale Phase 2',
-    'Presale Phase 3',
-    'Presale Phase 4',
-    'Presale Phase 5',
-    'Presale Phase 6',
-    'IDO'
-  ];
+  if (presaleChartInstance) presaleChartInstance.destroy();
 
-  const values = [2000000, 2000000, 1500000, 1500000, 1500000, 2000000, 10000000];
-
-  const colors = [
-    '#EF4444', '#FACC15', '#22C55E', '#FB923C',
-          '#22D3EE', '#2563EB', '#F43F5E'
-  ];
-
-  const presaleChart = new Chart(ctx2, {
+  presaleChartInstance = new Chart(ctx2, {
     type: 'pie',
     data: {
-      labels: labels,
+      labels: [
+        'Presale Phase 1', 'Presale Phase 2', 'Presale Phase 3',
+        'Presale Phase 4', 'Presale Phase 5', 'Presale Phase 6', 'IDO'
+      ],
       datasets: [{
-        data: values,
-        backgroundColor: colors,
+        data: [2000000, 2000000, 1500000, 1500000, 1500000, 2000000, 10000000],
+        backgroundColor: [
+          '#EF4444', '#FACC15', '#22C55E', '#FB923C',
+          '#22D3EE', '#2563EB', '#F43F5E'
+        ],
         borderWidth: 0,
-        hoverOffset: 15
+        hoverOffset: 10
       }]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
+      animation: false,
       plugins: {
         tooltip: {
           callbacks: {
-            label: function(context) {
-              const label = context.label || '';
-              const value = context.raw || 0;
-              return `${label}: ${value}`;
-            }
+            label: (context) => `${context.label || ''}: ${context.raw || 0}`
           }
         },
         legend: {
           display: true,
           position: 'bottom',
           labels: {
-            color: '#fff',         // white text
-            padding: 20,
-            boxWidth: 12,
-            font: {
-              size: 14,
-              weight: '500'
-            }
+            color: '#fff',
+            font: { size: 14, weight: '500' }
           }
         }
-      },
-      layout: {
-        padding: 20
       }
     }
   });
-
-});
+}
