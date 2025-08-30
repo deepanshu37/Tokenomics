@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="imgs/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="javas.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>SellBuyPlay Token Presale</title>
+  <style>
+    
+  </style>
+</head>
+<body class="bg-[#04010d] text-white">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo (Left) -->
+      <div class="nav-logo">
+        <a href="#">
+          <img src="imgs/logo.png" alt="Logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- Desktop Menu (Center) -->
+      <ul class="nav-menu">
+        <li><a href="#slideshow-section" class="nav-link">Home</a></li>
+        <li><a href="#tokenomics" class="nav-link">Tokenomics</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#" class="nav-link">Whitepaper</a></li>
+        <li><a href="#" class="nav-link">Login / Sign up</a></li>
+      </ul>
+
+      <!-- Buy Presale Button (Right) -->
+      <div class="nav-right">
+        <div class="divider"></div>
+        <a href="#" class="btn-presale">Buy Presale</a>
+        <!-- Hamburger (Mobile) -->
+        <button id="menu-btn" class="hamburger">
+          <svg class="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <button id="close-btn" class="close-btn">&times;</button>
+    <a href="#slideshow-section" class="mobile-link">Home</a>
+    <a href="#tokenomics" class="mobile-link">Tokenomics</a>
+    <a href="#" class="mobile-link">Team</a>
+    <a href="#" class="mobile-link">Whitepaper</a>
+    <a href="#" class="mobile-link">Login / Sign up</a>
+    <a href="#" class="mobile-link btn-presale">Buy Presale</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="slideshow-section" class="slideshow">
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Text Content -->
+    <div class="slide-content">
+      <h1 class="title gradient-text">
+        eCommerce Via Video Games<br>
+        <span class="highlight-white">Gamify eCommerce & GamiFi transactions</span>
+      </h1>
+      <p class="subtitle">
+        We offer Unique & Lucrative monetization streams to profit via their Skills and Playtime.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Be an $SBP owner/ holder in 4 steps -->
+  <section class="steps-section">
+      <h2 class="section-title gradient-text">
+        Be an $SBP Owner / Holder in 4 Steps
+      </h2>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card ring-red">
+          <div class="step-content">
+            <img src="imgs/svg/Telegram.svg" alt="Step 1" class="step-icon">
+            <h3 class="step-title">Enter $SBP’s Ecosystem</h3>
+            <p class="step-text">
+              Click and enter our IDO presale platform as you will need to sign up to participate in the SBP IDO Presale. This will be your personal user login before launch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card ring-yellow">
+          <div class="step-content">
+            <img src="imgs/svg/Telegram.svg" alt="Step 2" class="step-icon">
+            <h3 class="step-title">Buy $SBP’s</h3>
+            <p class="step-text light">
+              We accept T, BUSD, USDC, ADA as some of the major cryptocurrencies as payment for $SBP in the IDO Presale phase.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card ring-green">
+          <div class="step-content">
+            <img src="imgs/svg/Telegram.svg" alt="Step 3" class="step-icon">
+            <h3 class="step-title">Destination Address</h3>
+            <p class="step-text light">
+              Copy and paste your preferred (BEP-20) destination wallet address. Kindly double-check the address as this is where your $SBP tokens will be distributed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card ring-blue">
+          <div class="step-content">
+            <img src="imgs/svg/Telegram.svg" alt="Step 4" class="step-icon">
+            <h3 class="step-title">Receive your $SBP’s</h3>
+            <p class="step-text light">
+              Now relax and keep calm for the TGE Event (day of launch)—your $SBP will be airdropped to your chosen address!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Bar Section -->
+    <section class="progress-section">
+      <h2 class="section-title-white">Roadmap Progress</h2>
+
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%;"></div>
+        <div class="milestones">
+          <div class="milestone">
+            <div class="milestone-dot"></div>
+            <span>
+              Milestone 1<br>
+              <span class="timeline">Timeline 1</span>
+            </span>
+          </div>
+          <div class="milestone">
+            <div class="milestone-dot"></div>
+            <span>
+              Milestone 2<br>
+              <span class="timeline">Timeline 2</span>
+            </span>
+          </div>
+          <div class="milestone">
+            <div class="milestone-dot"></div>
+            <span>
+              Milestone 3<br>
+              <span class="timeline">Timeline 3</span>
+            </span>
+          </div>
+          <div class="milestone">
+            <div class="milestone-dot"></div>
+            <span>
+              Milestone 4<br>
+              <span class="timeline">Timeline 4</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Opportunity Section -->
+<section class="main-section">
+  <section class="sub-section">
+    <h2 class="sub-title">Connect with Esports Gamers, Teams & Streamers</h2>
+
+    <div class="cards-grid">
+      
+      <!-- Card 1 -->
+      <div class="info-card card-green">
+        <h1 class="card-header">Market Opportunity</h1>
+        <div class="card-content">
+          <ol>
+            <li>
+              TAM - $5 Trillion -combined from both of our main "unified" markets i.e. Esports and e-Commerce and our unique operating model B2B - B2C - C2C, Esports: $1B / e-Commerce: $4.9 Trillion.
+              <hr>
+            </li>
+            <li>
+              SAM - 3 Billion Active Gamers globally, 7.9 Million Online Retailers and also as there were 1.66 Billion Global Digital Buyers in 2017 that means 21.8% of the World’s population buys online. Nowadays, the number has risen to over 2.14 Billion and by the year 2040, it’s estimated that 95% of all purchases will be through E-Commerce.
+              <hr>
+            </li>
+            <li>
+              Future SOM - at least 5% i.e. 200 Million potential customers/ users of the above 2 core Global audiences.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="info-card card-blue">
+        <h1 class="card-header">Why Invest Now</h1>
+        <div class="card-content">
+          <ol>
+            <li>
+              Young gamers between the ages 18 to 25, who are digital natives, watch 34% more esports than traditional sports, Global esports audience grew 8.7 percent in 2022 to 532 million and Newzoo expects the total audience will surpass 640 million in 2025.
+              <hr>
+            </li>
+            <li>
+              Just over 261 million people have consumed esports content more than once a month in 2022 and that number is expected to grow to 318 million in 2025, according to Newzoo.
+              <hr>
+            </li>
+            <li>
+              Esports market generated about $1.38 billion in global revenue in 2023, according to Newzoo, with China accounting for almost one-third of the market, being projected to grow 400% in the next seven years to $4.28 billion by 2027.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+<!-- Video Description -->
+<section class="video-section">
+  <h2 class="video-title">Video Description</h2>
+
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/7w7LdV1h0as"
+      title="YouTube video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+<!-- Tockenomics -->
+<section id="tokenomics">
+  <h2 class="section-title">Tokenomics</h2>
+
+  <div class="tokenomics-container">
+    
+    <!-- Left: Description + Legend -->
+    <div class="tokenomics-text">
+      <h3 class="tokenomics-heading">
+        Token Allocation - Sell, Buy, Play2Earn and Hodl etc.
+      </h3>
+      <p>
+        $SBP aims to be the first oriented Esports / Gaming & Ecommerce Community token worldwide, 
+        as will not only be a powerful help for Serious Bright Players of all video games / genres 
+        to monetize via their skills but also will facilitate and optimise the speed of buying and 
+        selling items - products – services, to strengthen the online presence of the Brands and provide 
+        not only growth but also to help those create more revenue streams. Hold $SBP in an eligible 
+        wallet and automatically receive rewards via our innovative ecosystem!
+      </p>
+
+      <!-- Legend (now inside text) -->
+      <div class="legend">
+        <div><span class="box treasury"></span>Treasury/Reserve <span class="percent">25%</span></div>
+        <div><span class="box marketing"></span>Marketing <span class="percent">25%</span></div>
+        <div><span class="box founding"></span>Founding Team <span class="percent">15%</span></div>
+        <div><span class="box advisors"></span>Advisors <span class="percent">2.7%</span></div>
+        <div><span class="box staking"></span>Staking/Yield Farming <span class="percent">10%</span></div>
+        <div><span class="box liquidity"></span>Liquidity <span class="percent">10%</span></div>
+        <div><span class="box community"></span>Community Fund <span class="percent">10%</span></div>
+        <div><span class="box sales"></span>Token Sales <span class="percent">2.3%</span></div>
+      </div>
+      <!-- Note -->
+      <p class="note">
+        * Tokenomics are subject to be altered in accordance with IDO Presale performance, fellow gamers please help us raise it!
+      </p>
+    </div>
+
+    <!-- Right: Chart -->
+    <div class="tokenomics-chart">
+      <canvas id="tokenChart"></canvas>
+    </div>
+  </div>
+
+</section>
+
+  <!-- Token Information -->
+<section class="token-info-section">
+    <h2 class="token-info-heading">
+        Token Information - Only for SBPlayers & Investors!
+      </h2>
+
+  <div class="token-info-container">
+    
+    <!-- Left: Chart -->
+    <div class="chart-container">
+      <canvas id="presaleChart"></canvas>
+    </div>
+
+    <!-- Right: Description & Allocation Text -->
+    <div class="token-info-text">
+      <!-- Table -->
+      <div class="table-wrapper">
+        <table class="token-table">
+          <tbody>
+            <tr>
+              <td>Token Name</td>
+              <td>SBP Token</td>
+            </tr>
+            <tr>
+              <td>Token Symbol</td>
+              <td>$SBP</td>
+            </tr>
+            <tr>
+              <td>Decimals</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Blockchain</td>
+              <td>ADA - BSC - MATIC</td>
+            </tr>
+            <tr>
+              <td>Total Supply</td>
+              <td>1,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Maximum Supply</td>
+              <td>3,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Initial Market Cap</td>
+              <td>$5,630,000</td>
+            </tr>
+            <tr>
+              <td>Initial Circulating Supply</td>
+              <td>$22,520,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <div><span class="box phase1"></span>Presale Phase 1 <span class="percent">2,000,000</span></div>
+        <div><span class="box phase2"></span>Presale Phase 2 <span class="percent">2,000,000</span></div>
+        <div><span class="box phase3"></span>Presale Phase 3 <span class="percent">1,500,000</span></div>
+        <div><span class="box phase4"></span>Presale Phase 4 <span class="percent">1,500,000</span></div>
+        <div><span class="box phase5"></span>Presale Phase 5 <span class="percent">1,500,000</span></div>
+        <div><span class="box phase6"></span>Presale Phase 6 <span class="percent">2,000,000</span></div>
+        <div><span class="box ido"></span>IDO <span class="percent">10,000,000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Our Team-->
+<section id="team">
+  <h2>Our Team</h2>
+
+  <div class="team-container">
+    <!-- Team Member Card -->
+    <div class="team-card red-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/George Angelopoulos.png" alt="George Angelopoulos">
+      </div>
+      <p class="role">CVO / Founder</p>
+      <a href="https://tinyurl.com/SBP-GAngelopoulos" target="_blank" class="name">
+        George Angelopoulos
+      </a>
+    </div>
+
+    <div class="team-card red-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/Chronis Pantelemidis.png" alt="Chronis Pantelemidis">
+      </div>
+      <p class="role">CTO</p>
+      <a href="https://www.linkedin.com/in/chronispantelemidis/" target="_blank" class="name">
+        Chronis Pantelemidis
+      </a>
+    </div>
+
+    <div class="team-card red-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/Michalis kamparakis.jpg" alt="Michalis Kamparakis">
+      </div>
+      <p class="role">CFO</p>
+      <a href="https://www.linkedin.com/in/michaliskamparakis" target="_blank" class="name">
+        Michalis Kamparakis
+      </a>
+    </div>
+
+    <div class="team-card orange-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/Demetris Zenetos.jpg" alt="Demetris Zenetos">
+      </div>
+      <p class="role">COO</p>
+      <a href="https://tinyurl.com/SBP-DZenetos" target="_blank" class="name">
+        Demetris Zenetos
+      </a>
+    </div>
+
+    <div class="team-card orange-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/Andreas Mathikolonis.jpeg" alt="Andreas Mathikolonis">
+      </div>
+      <p class="role">CBO</p>
+      <a href="https://www.linkedin.com/in/andreasmathikolonis/" target="_blank" class="name">
+        Andreas Mathikolonis
+      </a>
+    </div>
+
+    <div class="team-card orange-border">
+      <div class="image-wrapper">
+        <img src="imgs/team/Vikas Verma.png" alt="Vikas Verma">
+      </div>
+      <p class="role">CPDO</p>
+      <a href="https://www.linkedin.com/in/vikas-verma-992187137/" target="_blank" class="name">
+        Vikas Verma
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Our Advisory Team -->
+<section id="advisory-team">
+  <h2>Our Advisory Team</h2>
+
+  <div class="advisory-container">
+    <!-- Advisory Member Card -->
+    <div class="advisory-card">
+      <div class="image-wrapper">
+        <img src="imgs/advisory/Matilda Sung.jpg" alt="Matilda Sung">
+      </div>
+      <p class="role">Adviser</p>
+      <a href="https://www.linkedin.com/in/matildasung/" target="_blank" class="advisor-name">
+        Matilda Sung
+      </a>
+    </div>
+
+    <div class="advisory-card">
+      <div class="image-wrapper">
+        <img src="imgs/advisory/Brian J. Esposito.png" alt="Brian J. Esposito">
+      </div>
+      <p class="role">Adviser</p>
+      <a href="https://www.linkedin.com/in/brianjesposito/" target="_blank" class="advisor-name">
+        Brian J. Esposito
+      </a>
+    </div>
+
+    <div class="advisory-card">
+      <div class="image-wrapper">
+        <img src="imgs/advisory/Benjamin Daykhovsky.jpg" alt="Benjamin Daykhovsky">
+      </div>
+      <p class="role">Adviser</p>
+      <a href="https://www.linkedin.com/in/benjamin-daykhovsky-2684a414/" target="_blank" class="advisor-name">
+        Benjamin Daykhovsky
+      </a>
+    </div>
+
+    <div class="advisory-card">
+      <div class="image-wrapper">
+        <img src="imgs/advisory/Jason Chung.jpeg" alt="Jason Chung">
+      </div>
+      <p class="role">Adviser</p>
+      <a href="https://www.linkedin.com/in/george-martinis-5236a38a/" target="_blank" class="advisor-name">
+        Jason Chung
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Upper Footer Sections -->
+    <div class="footer-grid">
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Do you want to sell through SellBuyPlay?</a></li>
+          <li><a href="#">Are you a developer?</a></li>
+          <li><a href="#">Advertising</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h3>Purchase via SellBuyPlay</h3>
+        <ul>
+          <li><a href="#">Advantages</a></li>
+          <li><a href="#">SellBuyPlay Shopping Security</a></li>
+          <li><a href="#">Return & Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h3>Help & Contact</h3>
+        <ul>
+          <li><a href="#">My orders</a></li>
+          <li><a href="#">Returns via SellBuyPlay</a></li>
+          <li><a href="#">Need more help?</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Blog @ SellBuyPlay</a></li>
+          <li><a href="#">White Paper</a></li>
+          <li><a href="#">Work at SellBuyPlay</a></li>
+          <li><a href="#">Vulnerability Disclosure @ SellBuyPlay</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider">
+
+    <!-- Secondary Sections -->
+    <div class="footer-grid secondary">
+      <!-- Join Section -->
+      <div class="footer-column">
+        <p class="section-title">Join our IDO</p>
+        <p class="section-title">Join our ISPO</p>
+        <p class="section-title">Supported By</p>
+        <ul>
+          <li><a href="https://www.hypesportsinnovation.com/startup/sellbuyplay/">Hype Sports Innovation</a></li>
+          <li><a href="https://www.hypesportsinnovation.com/startup/sellbuyplay/"></a>
+          <img src="imgs/elevateGreece.png" alt="Elevate Greece">
+        </a>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="footer-column">
+        <p class="section-title">FAQ</p>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Whitepaper</a></li>
+        </ul>
+      </div>
+
+      <!-- Community Links -->
+      <div class="footer-column">
+        <p class="section-title">Join our Communities</p>
+        <div class="community-grid">
+          <a href="#"><img src="imgs/svg/telegram.svg"> Telegram</a>
+          <a href="#"><img src="imgs/svg/twitter.svg"> Twitter</a>
+          <a href="#"><img src="imgs/svg/facebook.svg"> Facebook</a>
+          <a href="#"><img src="imgs/svg/reddit.svg"> Reddit</a>
+          <a href="#" class="discord"><img src="imgs/svg/discord.svg"> Discord</a>
+          <a href="#"><img src="imgs/svg/linkedin.svg"> LinkedIn</a>
+          <a href="#"><img src="imgs/svg/medium.svg"> Medium</a>
+          <a href="#"><img src="imgs/svg/quora.svg"> Quora</a>
+          <a href="#"><img src="imgs/svg/instagram.svg"> Instagram</a>
+          <a href="#"><img src="imgs/svg/tiktok.svg"> TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <a href="#"><img src="imgs/logo.png" alt="SellBuyPlay Logo"></a>
+      <p class="legal">© 2024 SellBuyPlay Limited | Reg. No. C 105280 | 115B, Suite 3 Old Mint Street | VALLETTA VLT 1515 | MALTA | All rights reserved.</p>
+      <p class="disclaimer">
+        SellBuyPlay isn’t directly affiliated with, endorsed or maintained or sponsored by Activision Blizzard, Apple Inc, Electronic Arts, Epic Games, Microsoft, PlayStation, Riot Games, Sony, Take-Two Interactive, Xbox or any of the rest Game publishers. All artwork and associated imagery, content, games titles, trade names and/or dress, trademarks, are trademarks and/or copyright material of their respective owners.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
