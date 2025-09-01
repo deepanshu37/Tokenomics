@@ -15,27 +15,33 @@ window.addEventListener('DOMContentLoaded', () => {
   const slides = [
     {
       image: "imgs/homeBGs/newDesign/1.jpg",
-      title: `eCommerce Via Video Games<br> 
-        <span class="highlight-white">Gamify eCommerce & GamiFi transactions</span>`,
-      subtitle: `The first in kind Multifaceted & Play2Earn <br> Marketplace using Gaming, Streaming and Play<br> funding features powered by AI & Blockchain.`
-    },
-    {
-      image: "imgs/homeBGs/newDesign/4.jpg",
-      title: `Connect Gamers, Teams, Streamers Community Organizers<br> 
-        <span class="highlight-white">with Brands Worldwide</span>`,
-      subtitle: `We offer Unique & Lucrative monetization streams<br> to profit via their Skills and Playtime.`
-    },
-    {
-      image: "imgs/homeBGs/newDesign/2.jpg",
       title: `The First ever Web3.0 "Play2Earn"<br>
         <span class="highlight-white">Network Marketplace!</span>`,
       subtitle: `Esports PvP Games & Tournaments with Real Life's<br> Tangible assets - Cash & NFTs as Rewards.`
     },
     {
       image: "imgs/homeBGs/newDesign/3.jpg",
-      title: `Find Gear That Suits you<br>
-        <span class="highlight-white">Just Do It</span>`,
-      subtitle: ``
+      title: `Connect Gamers, Teams, Streamers Community Organizers<br> 
+        <span class="highlight-white">with Brands Worldwide</span>`,
+      subtitle: `We offer Unique & Lucrative monetization streams<br> to profit via their Skills and Playtime.`
+    },
+    {
+      image: "imgs/homeBGs/newDesign/2.jpg",
+      title: `eCommerce Via Video Games<br> 
+        <span class="highlight-white">Gamify eCommerce & GamiFi transactions</span>`,
+      subtitle: `The first in kind Multifaceted & Play2Earn <br> Marketplace using Gaming, Streaming and Play<br> funding features powered by AI & Blockchain.`
+    }, 
+    {
+      image: "imgs/homeBGs/newDesign/4.jpg",
+      title: `The First ever Web3.0 "Play2Earn"<br>
+        <span class="highlight-white">Network Marketplace!</span>`,
+      subtitle: `Esports PvP Games & Tournaments with Real Life's<br> Tangible assets - Cash & NFTs as Rewards.`
+    },
+    {
+      image: "imgs/homeBGs/newDesign/5.jpg",
+      title: `eCommerce Via Esports Games<br> 
+        <span class="highlight-white">Gamify eCommerce & GamiFi transactions</span>`,
+      subtitle: `The first in kind Multifaceted & Hybrid <br> Marketplace using Gaming, Streaming and Playfunding<br> features powered by AI & Blockchain.`
     }
   ];
 
