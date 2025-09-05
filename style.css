@@ -312,51 +312,57 @@
   box-shadow: 0 0 0 2px #1C75BC;
 }
 
-/* Progress Bar */
+
+/* Progress section */
+.progress-section {
+  position: relative;
+}
+
+/* Background bar */
 .progress-bar {
   position: relative;
   width: 100%;
   height: 0.5rem;
   background: #374151;
   border-radius: 9999px;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 
 .progress-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 0.5rem;
+  height: 100%;
   background: linear-gradient(90deg, #004aad, #00c364);
   border-radius: 9999px;
 }
 
-/* Milestones */
+/* Milestones container */
 .milestones {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: -2rem;
-  left: 0;
-  width: 100%;
+  position: relative;
+  z-index: 1; /* ensures dots stay above the bar */
+  margin-top: 1rem;
+}
+
+/* Each milestone column */
+.milestone {
+  width: 22%; /* keeps spacing balanced */
+  text-align: center;
   font-size: 0.875rem;
   font-weight: 500;
 }
 
-.milestone {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
-  text-align: center;
-}
-
+/* Dot aligned with text */
 .milestone-dot {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
   background: #22c55e;
-  margin-bottom: 25px;
+  margin: -30px auto 1rem; /* centers above text */
+}
+
+.milestone a {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .timeline {
@@ -369,7 +375,23 @@
 
 
 
+
+
                                             /* Small screrens */
+@media (max-width: 768px) {
+  .milestone-dot,.progress-bar {
+    display: none;
+  }
+  .milestone {
+    width: auto;
+    padding: 7%;
+  }
+
+  .milestones {
+    display:contents;
+  }
+}
+
 
 @media (min-width: 768px) {
   .slide-content {
@@ -452,13 +474,6 @@
   padding: 3rem 10%;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  color: #fff;
-}
 
 .sub-title {
   text-align: center;
@@ -555,7 +570,7 @@
 
 /* Heading */
 .video-title {
-  font-size: 1.5rem; /* Tailwind's text-2xl equivalent */
+  font-size: 1.75rem; /* Tailwind's text-2xl equivalent */
   font-weight: 700;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -594,7 +609,7 @@
 /* Title */
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 2.5rem;
   color: #fff;
@@ -1015,8 +1030,13 @@
   }
 }
 
+.footer-column{
+  max-width: 250px;
+  max-height: 270px;
+}
+
 .footer-column h3,
-.section-title {
+.section-title2 {
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
@@ -1042,7 +1062,7 @@
 
 .footer-column a:hover {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: under  line;
 }
 
 /* Supported + Communities in center */
