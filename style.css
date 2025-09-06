@@ -322,7 +322,7 @@
 .progress-bar {
   position: relative;
   width: 100%;
-  height: 0.5rem;
+  height: 0.25rem;
   background: #374151;
   border-radius: 9999px;
   margin-bottom: 0rem;
@@ -357,7 +357,7 @@
   height: 1.25rem;
   border-radius: 50%;
   background: #22c55e;
-  margin: -30px auto 1rem; /* centers above text */
+  margin: -28px auto 1rem; /* centers above text */
 }
 
 .milestone a {
@@ -806,7 +806,7 @@
 #team {
   background-color: #04010d;
   color: #ffffff;
-  padding: 3rem 5%;
+  /* padding: 3rem 5%; */
   text-align: center;
 }
 
@@ -822,13 +822,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  margin: 0px 10% 0px 10%;
 }
 
 /* Individual card */
 .team-card {
   background-color: #0e0b1c;
   width: 30%;
-  min-width: 260px; /* ensures readability on small screens */
+  min-width: 260px;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
@@ -843,6 +844,11 @@
 .red-border {
   border: 1px solid #ED1C24;
   color: #ED1C24;
+}
+
+.green-border {
+  border: 1px solid #9AC23C;
+  color: #9AC23C;
 }
 
 .orange-border {
@@ -881,7 +887,7 @@
 }
 
 .name:hover {
-  color: #9AC23C;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -894,7 +900,8 @@
 
 @media (max-width: 640px) {
   .team-card {
-    width: 100%;
+    width: 80%;
+    min-width: 150px;
   }
 
   .name {
@@ -904,6 +911,7 @@
 
 /* Advisory Section */
 #advisory-team {
+  margin: 0px 10% 0px 10%;
   background-color: #04010d;
   color: #ffffff;
   padding: 3rem 5%;
@@ -927,12 +935,12 @@
 /* Advisory card */
 .advisory-card {
   background-color: #0e0b1c;
-  width: 30%;
+  width: 35%;
   min-width: 260px; /* Keeps readable on small screens */
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
-  border: 1px solid #9AC23C; /* Always orange */
+  border: 1px solid #1C75BC; /* Always orange */
   transition: transform 0.3s ease;
 }
 
@@ -965,13 +973,13 @@
 .advisor-name {
   font-weight: 600;
   font-size: 1.125rem;
-  color: #9AC23C; /* green */
+  color: #1C75BC; /* green */
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .advisor-name:hover {
-  color: #FCAF17;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -984,7 +992,8 @@
 
 @media (max-width: 640px) {
   .advisory-card {
-    width: 100%;
+    width: 90%;
+    min-width: 150px;
   }
 
   .advisor-name {
@@ -996,8 +1005,8 @@
 /* Base Footer */
 .site-footer {
   background-color: #1a1a1a;
-  color: #d1d5db; /* gray-300 */
-  padding: 3rem 10%;
+  color: #d1d5db;
+  padding: 3rem 10% 0rem 10%;
   font-family: Arial, sans-serif;
 }
 
@@ -1006,31 +1015,26 @@
   margin: 0 auto;
 }
 
-/* Grid Layout */
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.footer-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 4rem;
 }
 
-@media (min-width: 640px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.footer-column{
+.footer-column {
   max-width: 250px;
-  max-height: 270px;
 }
 
-.footer-column h3,
 .section-title2 {
   color: #fff;
   font-weight: 600;
@@ -1038,50 +1042,41 @@
   margin-bottom: 1rem;
 }
 
-.footer-column ul {
+/* --- Supported By --- */
+.supported-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-column ul li {
-  margin-bottom: 0.5rem;
+.supported-list li {
+  margin-bottom: 1rem;
 }
 
-.footer-column a {
-  font-size: 0.9rem;
-  color: #d1d5db;
-  text-decoration: none;
-  transition: color 0.3s, text-decoration 0.3s;
-}
-
-.footer-column a:hover {
-  color: #fff;
-  text-decoration: under  line;
-}
-
-/* Supported + Communities in center */
-.footer-flex {
+.support-box {
+  background: #2a2a2a;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
   display: flex;
-  justify-content: space-evenly; /* equal margins before, between, after */
-  align-items: flex-start;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
 }
 
-@media (max-width: 768px) {
-  .footer-flex {
-    flex-direction: column; /* stack vertically */
-    align-items: center;    /* center each column horizontally */
-    text-align: center;
-    gap: 2rem;              /* space between stacked items */
-  }
+.support-box img {
+  max-width: 180px;
+  height: auto;
 }
 
-/* Community Buttons */
+.support-box:hover {
+  background: #444;
+}
+
+/* --- Community Buttons --- */
 .community-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 0.75rem;
   max-width: 280px;
 }
 
@@ -1091,7 +1086,7 @@
   gap: 0.5rem;
   background: #2a2a2a;
   color: white;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 0.8rem;
   border-radius: 6px;
   font-size: 0.9rem;
   text-decoration: none;
@@ -1099,7 +1094,7 @@
 }
 
 .community-grid a:hover {
-  background: #979797;
+  background: #444;
 }
 
 .community-grid img {
@@ -1117,6 +1112,7 @@
   color: white;
 }
 
+
 /* Footer Bottom */
 .footer-bottom {
   margin-top: 2.5rem;
@@ -1124,14 +1120,15 @@
 }
 
 .footer-bottom img {
+  align-content: center;
   width: 25%;
-  margin: 0px 40% 1rem 40%;
+  margin: 0px 37.5% 1rem 37.5%;
 }
 
 .footer-bottom .legal {
   color: white;
   font-size: 0.75rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .footer-bottom .disclaimer {
