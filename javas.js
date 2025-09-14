@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     index = (index + 1) % slides.length;
   }
 
-  setInterval(changeSlide, 10000);
+  setInterval(changeSlide, 8000);
   changeSlide();
 
   // Render charts ONCE
@@ -60,35 +60,44 @@ function renderTokenChart() {
   tokenChartInstance = new Chart(ctx, {
     type: 'pie',
     data: {
-      labels: [
-        'Treasury/Reserve', 'Marketing', 'Founding Team', 'Advisors',
-        'Staking/Yield Farming', 'Liquidity', 'Community Fund', 'Token Sales'
+    labels: [
+      'Presale', 'Treasury/ Reserve', 'Marketing', 'Team', 
+      'Advisors', 'Staking/ Yield Farming', 'Liquidity/ Listings', 
+      'Community Development Fund'
+    ],
+    desc: [
+      '300,000,000', '750,000,000', '690,000,000', '300,000,000', 
+      '60,000,000', '300,000,000', '300,000,000', '300,000,000'
+    ],
+    datasets: [{
+      data: [10, 25, 23, 10, 2, 10, 10, 10],
+      backgroundColor: [
+        '#EF4444', '#FACC15', '#22C55E', '#FB923C',
+        '#22D3EE', '#2563EB', '#F43F5E', '#93C5FD'
       ],
-      datasets: [{
-        data: [25, 25, 15, 2.7, 10, 10, 10, 2.3],
-        backgroundColor: [
-          '#EF4444', '#FACC15', '#22C55E', '#FB923C',
-          '#22D3EE', '#2563EB', '#F43F5E', '#93C5FD'
-        ],
-        borderWidth: 0,
-        hoverOffset: 10
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      animation: false,
-      transitions: { active: { animation: { duration: 0 } } }, // stop flicker
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (context) => `${context.label || ''}: ${context.raw || 0}%`
+      borderWidth: 0,
+      hoverOffset: 10
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    animation: false,
+    transitions: { active: { animation: { duration: 0 } } }, // stop flicker
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            const index = context.dataIndex;
+            const desc = context.chart.data.desc[index]; // get desc value
+            const percent = context.raw; // percentage
+            return `${desc} (${percent}%)`; 
           }
         }
       }
     }
-  });
+  }});
 }
 
 let presaleChartInstance;
@@ -100,32 +109,40 @@ function renderPresaleChart() {
     type: 'pie',
     data: {
       labels: [
-        'Presale Phase 1', 'Presale Phase 2', 'Presale Phase 3',
-        'Presale Phase 4', 'Presale Phase 5', 'Presale Phase 6', 'IDO'
+        'Private Round', 'Round 1', 'Round 2', 'Round 3',
+        'Round 4', 'Round 5', 'Round 6', 'Public IDO'
+      ],
+      desc: [
+        '110,000,000', '20,000,000', '25,000,000', '30,000,000',
+        '30,000,000', '30,000,000', '30,000,000', '25,000,000'
       ],
       datasets: [{
-        data: [2000000, 2000000, 1500000, 1500000, 1500000, 2000000, 10000000],
+        data: [36.7, 6.7, 8.3, 10.0, 10.0, 10.0, 10.0, 8.3],
         backgroundColor: [
           '#EF4444', '#FACC15', '#22C55E', '#FB923C',
-          '#22D3EE', '#2563EB', '#F43F5E'
+          '#22D3EE', '#2563EB', '#F43F5E', '#93C5FD'
         ],
         borderWidth: 0,
         hoverOffset: 10
       }]
     },
     options: {
-  responsive: false,   // ⛔ stops resize loop
-  maintainAspectRatio: false,
-  animation: false,
-  plugins: {
-    legend: { display: false },
-    tooltip: {
-      callbacks: {
-        label: (context) => `${context.label || ''}: ${context.raw || 0}`
+      responsive: false,   // stops resize loop
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (context) => {
+              const index = context.dataIndex;
+              const desc = context.chart.data.desc[index];
+              const percent = context.raw;
+              return `${desc} (${percent}%)`;
+            }
+          }
+        }
       }
     }
-  }
-}
-
   });
 }

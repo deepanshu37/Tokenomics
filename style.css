@@ -793,13 +793,15 @@
 }
 
 /* Legend Colors (match chart colors) */
-.legend .phase1 { background: #EF4444; }
-.legend .phase2 { background: #FACC15; }
-.legend .phase3 { background: #22C55E; }
-.legend .phase4 { background: #FB923C; }
-.legend .phase5 { background: #22D3EE; }
-.legend .phase6 { background: #2563EB; }
-.legend .ido    { background: #F43F5E; }
+.legend .private { background: #EF4444; }
+/* .legend .phase1 { background: #EF4444; } */
+.legend .phase1 { background: #FACC15; }
+.legend .phase2 { background: #22C55E; }
+.legend .phase3 { background: #FB923C; }
+.legend .phase4 { background: #22D3EE; }
+.legend .phase5 { background: #2563EB; }
+.legend .phase6 { background: #F43F5E; }
+.legend .ido { background: #93C5FD; }
 
 
 /* Section Styling */
